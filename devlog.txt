@@ -1,0 +1,2 @@
+09/10/22:
+Progress made on the UI and UX side, functionality will be worked on later. Test elements for the UI have been created and color themes are currently being tested. Dark mode looks alright while the light mode looks bad with the current configuration of having a base hsl value for each mode and a specified opacity value for different elements. This has been made whilst working on the dark mode so it is unsurprising that the light mode looks really bad.

@@ -1,3 +1,10 @@
+const getMainNav = document.getElementById("main-nav")
+const getMainSection = document.getElementById("main-section")
+
+function fixSpacing() {
+    getMainSection.style.paddingTop = `${getMainNav.clientHeight}px`
+}
+
 const standardTime = 60
 
 let setHours = 0   //max 99 hours or 5940 mins or 356400 seconds

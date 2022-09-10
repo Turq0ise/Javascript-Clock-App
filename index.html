@@ -5,10 +5,193 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="SCSS/styles.css">
+    <script src="https://kit.fontawesome.com/e00005890a.js" defer></script>
     <script src="JS/script.js" defer></script>
     <title>Javascript Clock App</title>
 </head>
-<body>
-    <h1>Test</h1>
+<body onload="fixSpacing()">
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#focus-timer-section"><i class="fa-solid fa-chart-pie"></i> Focus Timer</a></li>
+            <li><a href="#timer-section"><i class="fa-solid fa-hourglass-half"></i> Timer</a></li>
+            <li><a href="#stopwatch-section"><i class="fa-solid fa-stopwatch"></i> Stopwatch</a></li>
+            <li><a href="#alarm-section"><i class="fa-solid fa-bell"></i> Alarm</a></li>
+            <li><a href="#world-clock-section"><i class="fa-solid fa-globe"></i> World Clock</a></li>
+        </ul>
+    </nav>
+
+    <button class="utility-btns" id="settings-btn">
+        <i class="fa-solid fa-gear"></i>
+    </button>
+
+    <button class="utility-btns" id="edit-btn">
+        <i class="fa-solid fa-pen"></i>
+    </button>
+
+    <div id="main-section">
+        <div id="focus-timer-section" class="sub-section">
+            <div class="content-section">
+                <div class="cards">
+                    <div class="top">
+                        <div class="name">test 1</div>
+                        <div class="actions">
+                            <button><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <p>00:00:00</p>
+                    </div>
+                    <div class="bottom">
+                        <button><i class="fa-solid fa-play"></i></button>
+                        <button><i class="fa-solid fa-rotate-right"></i></button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="top">
+                        <div class="name">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint cupiditate itaque voluptas rerum cum quos.</div>
+                        <div class="actions">
+                            <button><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <p>00:00:00</p>
+                    </div>
+                    <div class="bottom">
+                        <button><i class="fa-solid fa-play"></i></button>
+                        <button><i class="fa-solid fa-rotate-right"></i></button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="top">
+                        <div class="name">test 3</div>
+                        <div class="actions">
+                            <button><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <p>00:00:00</p>
+                    </div>
+                    <div class="bottom">
+                        <button><i class="fa-solid fa-play"></i></button>
+                        <button><i class="fa-solid fa-rotate-right"></i></button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="top">
+                        <div class="name">test 4</div>
+                        <div class="actions">
+                            <button><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <p>00:00:00</p>
+                    </div>
+                    <div class="bottom">
+                        <button><i class="fa-solid fa-play"></i></button>
+                        <button><i class="fa-solid fa-rotate-right"></i></button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="top">
+                        <div class="name">test 5</div>
+                        <div class="actions">
+                            <button><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <p>00:00:00</p>
+                    </div>
+                    <div class="bottom">
+                        <button><i class="fa-solid fa-play"></i></button>
+                        <button><i class="fa-solid fa-rotate-right"></i></button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="top">
+                        <div class="name">test 4</div>
+                        <div class="actions">
+                            <button><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <p>00:00:00</p>
+                    </div>
+                    <div class="bottom">
+                        <button><i class="fa-solid fa-play"></i></button>
+                        <button><i class="fa-solid fa-rotate-right"></i></button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="top">
+                        <div class="name">test 5</div>
+                        <div class="actions">
+                            <button><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <p>00:00:00</p>
+                    </div>
+                    <div class="bottom">
+                        <button><i class="fa-solid fa-play"></i></button>
+                        <button><i class="fa-solid fa-rotate-right"></i></button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="top">
+                        <div class="name">test 4</div>
+                        <div class="actions">
+                            <button><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <p>00:00:00</p>
+                    </div>
+                    <div class="bottom">
+                        <button><i class="fa-solid fa-play"></i></button>
+                        <button><i class="fa-solid fa-rotate-right"></i></button>
+                    </div>
+                </div>
+                <div class="cards">
+                    <div class="top">
+                        <div class="name">test 5</div>
+                        <div class="actions">
+                            <button><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <p>00:00:00</p>
+                    </div>
+                    <div class="bottom">
+                        <button><i class="fa-solid fa-play"></i></button>
+                        <button><i class="fa-solid fa-rotate-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="timer-section" class="sub-section">
+            <div class="content-section">
+                
+            </div>
+        </div>
+
+        <div id="stopwatch-section" class="sub-section">
+            <div class="content-section">
+                
+            </div>
+        </div>
+
+        <div id="alarm-section" class="sub-section">
+            <div class="content-section">
+                
+            </div>
+        </div> 
+        
+        <div id="world-clock-section" class="sub-section">
+            <div class="content-section">
+                
+            </div>
+        </div>
+    </div>
 </body>
 </html>
