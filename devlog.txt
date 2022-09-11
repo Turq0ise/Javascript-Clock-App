@@ -1,2 +1,5 @@
 09/10/22:
 Progress made on the UI and UX side, functionality will be worked on later. Test elements for the UI have been created and color themes are currently being tested. Dark mode looks alright while the light mode looks bad with the current configuration of having a base hsl value for each mode and a specified opacity value for different elements. This has been made whilst working on the dark mode so it is unsurprising that the light mode looks really bad.
+
+09/11/22:
+Made the light mode look better and added an accent color. Also added borders for additional contrast and styled the sample cards but responsiveness with text overflow needs to be implemented. Also added an indicator for the current page but the functionality does not work yet only the basic look.

@@ -25,24 +25,6 @@
   --c-border-clr: var(--dm-border-clr);
   --c-acc-clr: var(--acc-jsYellow-clr);
   --c-font-clr: var(--dm-font-clr);
-  /*  dark mode windows clock app
-      nav = hsl(0, 0%, 13%);
-      nav hover = hsl(0, 0%, 18%);
-      body = hsl(0, 0%, 15%);
-      card = hsl(0, 0%, 20%);
-      card content = hsl(0, 0%, 24%);
-      card content hover = hsl(0, 0%, 29%);
-      border = hsl(0, 0%, 11%);
-  */
-  /*  light mode windows clock app
-      nav = hsl(0, 0%, 95%);
-      nav hover = hsl(0, 0%, 92%);
-      body = hsl(0, 0%, 98%);
-      card = hsl(0, 0%, 99%);
-      card content = hsl(0, 0%, 100%);
-      card content hover = hsl(0, 0%, 97%);
-      border = hsl(0, 0%, 90%);
-  */
 }
 
 * {
@@ -64,7 +46,7 @@ body {
 #main-nav {
   width: 100%;
   height: auto;
-  padding: 1rem 0.5rem;
+  padding: 1rem 0.5rem 0 0.5rem;
   position: fixed;
   background-color: var(--c-nav-clr);
 }
@@ -73,15 +55,31 @@ body {
   flex-direction: row;
   width: 100%;
 }
-#main-nav ul li {
+#main-nav ul .nav-li {
+  position: relative;
   width: 25%;
   list-style: none;
   font-size: 2.3rem;
   text-align: center;
   font-weight: 700;
+  padding-bottom: 1rem;
 }
-#main-nav ul li a {
+#main-nav ul .nav-li a {
   text-decoration: none;
+}
+#main-nav ul .nav-li .current-indicator {
+  position: absolute;
+  margin: auto;
+  width: 5rem;
+  height: 0.5rem;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 0;
+  background-color: var(--c-acc-clr);
+  border-radius: 10px 10px 0 0;
+}
+#main-nav ul li:hover a, #main-nav ul li:hover i {
+  color: var(--c-acc-clr);
 }
 
 #main-section {
