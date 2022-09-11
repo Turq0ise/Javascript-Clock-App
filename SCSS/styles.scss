@@ -1,27 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300..900&display=swap');
 
 :root {
-    --lm-base-clr: 0, 0%, 87%;
-    --lm-font-clr: hsl(0, 0%, 0%);
-
-    --dm-base-clr: 0, 0%, 13%;
+    --dm-nav-clr: hsl(0, 0%, 13%);
+    --dm-navHover-clr: hsl(0, 0%, 18%);
+    --dm-body-clr: hsl(0, 0%, 15%);
+    --dm-card-clr: hsl(0, 0%, 20%);
+    --dm-card-content-clr: hsl(0, 0%, 24%);
+    --dm-card-contentHover-clr: hsl(0, 0%, 29%);
+    --dm-border-clr: hsl(0, 0%, 11%);
     --dm-font-clr: hsl(0, 0%, 100%);
 
-    --nav-opac: 1;
-    --body-opac: 0.95;
-    --card-opac: 0.9;
-    --btn-opac: 0.98;
-    --scroll-opac: 0.35;
-    --scrollThumb-opac: 0.8;
+    --lm-nav-clr: hsl(0, 0%, 95%);
+    --lm-navHover-clr: hsl(0, 0%, 92%);
+    --lm-body-clr: hsl(0, 0%, 98%);
+    --lm-card-clr: hsl(0, 0%, 99%);
+    --lm-card-content-clr: hsl(0, 0%, 100%);
+    --lm-card-contentHover-clr: hsl(0, 0%, 97%);
+    --lm-border-clr: hsl(0, 0%, 90%);
+    --lm-font-clr: hsl(0, 0%, 0%);
 
-    --c-base-clr: var(--lm-base-clr);
-    --c-nav-clr: hsl(var(--c-base-clr), var(--nav-opac));
-    --c-body-clr: hsl(var(--c-base-clr), var(--body-opac));
-    --c-card-clr: hsl(var(--c-base-clr), var(--card-opac));
-    --c-btn-clr: hsl(var(--c-base-clr), var(--btn-opac));
-    --c-scroll-clr: hsl(var(--c-base-clr), var(--scroll-opac));
-    --c-scrollThumb-clr: hsl(var(--c-base-clr), var(--scrollThumb-opac));
-    --c-font-clr: var(--lm-font-clr);
+    --acc-jsYellow-clr: hsl(52, 100%, 49%);
+
+    --c-nav-clr: var(--dm-nav-clr);
+    --c-navHover-clr: var(--dm-navHover-clr);
+    --c-body-clr: var(--dm-body-clr);
+    --c-card-clr: var(--dm-card-clr);
+    --c-btn-clr: var(--dm-card-content-clr);
+    --c-border-clr: var(--dm-border-clr);
+    --c-acc-clr: var(--acc-jsYellow-clr);
+    --c-font-clr: var(--dm-font-clr);
+
+    /*  dark mode windows clock app
+        nav = hsl(0, 0%, 13%);
+        nav hover = hsl(0, 0%, 18%);
+        body = hsl(0, 0%, 15%);
+        card = hsl(0, 0%, 20%);
+        card content = hsl(0, 0%, 24%);
+        card content hover = hsl(0, 0%, 29%);
+        border = hsl(0, 0%, 11%);
+    */
+
+    /*  light mode windows clock app
+        nav = hsl(0, 0%, 95%);
+        nav hover = hsl(0, 0%, 92%);
+        body = hsl(0, 0%, 98%);
+        card = hsl(0, 0%, 99%);
+        card content = hsl(0, 0%, 100%);
+        card content hover = hsl(0, 0%, 97%);
+        border = hsl(0, 0%, 90%);
+    */
 
     //light mode looks bad with this configuration
 }
@@ -31,6 +58,7 @@
     margin: 0;
     padding: 0;
     font-family: "Nunito";
+    color: var(--c-font-clr);
 }
 
 html {
@@ -62,7 +90,6 @@ body {
             
             a {
                 text-decoration: none;
-                color: var(--c-font-clr);
             }
         }
     }
@@ -88,21 +115,92 @@ body {
             height: 100%;
             overflow-y: scroll;
 
-            
             .cards {
-                display: flex;
-                flex-direction: column;
                 width: 28rem;
                 height: 20rem;
                 margin-block: clamp(2.8rem, 3vw, 3.5rem) clamp(.5rem, 1vw, 1.5rem);
                 margin-inline: clamp(1rem, 2.8vw, 3.5rem);
                 background-color: var(--c-card-clr);
-            }
-        }        
-    }
+                border: 2px solid var(--c-border-clr);
+                border-radius: 10px;
+                
+                .card-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 0.65rem;
+                    height: 100%;
 
-    .sub-section:nth-child(2n) {
-        background-color: yellow;
+                    .top {
+                        display: flex;
+                        justify-content: space-between;
+
+                        h1 {
+                            width: 65%;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        
+                        h1,
+                        i {
+                            font-size: 1.5rem;
+                        }
+
+                        button {
+                            border: none;
+                            background: transparent;
+                        }
+                    }
+
+                    .middle {
+                        text-align: center;
+                        vertical-align: middle;
+                        font-size: 1.8rem;
+                    }
+
+                    .bottom {
+                        display: flex;
+                        justify-content: center;
+                        gap: 1rem;
+                        
+                        button {
+                            border: none;
+                            background-color: transparent;
+                            
+                            i {
+                                font-size: 2.5rem;
+                            }
+                        }
+                        
+                        .play-btn {
+                            i {
+                                color: var(--c-acc-clr);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: var(--c-nav-clr);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--c-border-clr);
+            border-radius: 10px;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            border: 0;
+        }
     }
 }
 
@@ -116,7 +214,6 @@ body {
     
     i {
         font-size: 2rem;
-        color: var(--c-font-clr);
     }
 }
 
