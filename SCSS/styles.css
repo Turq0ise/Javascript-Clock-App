@@ -16,6 +16,9 @@
   --lm-card-contentHover-clr: hsl(0, 0%, 97%);
   --lm-border-clr: hsl(0, 0%, 90%);
   --lm-font-clr: hsl(0, 0%, 0%);
+  --acc-htmlOrange-clr: hsl(18, 89%, 55%);
+  --acc-cssBlue-clr: hsl(222, 88%, 56%);
+  --acc-sassPink-clr: hsl(330, 50%, 61%);
   --acc-jsYellow-clr: hsl(52, 100%, 49%);
   --c-nav-clr: var(--dm-nav-clr);
   --c-navHover-clr: var(--dm-navHover-clr);
@@ -23,7 +26,7 @@
   --c-card-clr: var(--dm-card-clr);
   --c-btn-clr: var(--dm-card-content-clr);
   --c-border-clr: var(--dm-border-clr);
-  --c-acc-clr: var(--acc-jsYellow-clr);
+  --c-acc-clr: var(--acc-sassPink-clr);
   --c-font-clr: var(--dm-font-clr);
 }
 
@@ -55,19 +58,20 @@ body {
   flex-direction: row;
   width: 100%;
 }
-#main-nav ul .nav-li {
-  position: relative;
+#main-nav ul a {
+  text-decoration: none;
   width: 25%;
+}
+#main-nav ul a .nav-li {
+  position: relative;
   list-style: none;
   font-size: 2.3rem;
   text-align: center;
   font-weight: 700;
   padding-bottom: 1rem;
 }
-#main-nav ul .nav-li a {
-  text-decoration: none;
-}
-#main-nav ul .nav-li .current-indicator {
+#main-nav ul a .nav-li .current-indicator {
+  opacity: 0;
   position: absolute;
   margin: auto;
   width: 5rem;
@@ -77,8 +81,10 @@ body {
   translate: -50% 0;
   background-color: var(--c-acc-clr);
   border-radius: 10px 10px 0 0;
+  visibility: 0;
+  transition: all 0.8s ease-in;
 }
-#main-nav ul li:hover a, #main-nav ul li:hover i {
+#main-nav ul a .nav-li:hover p, #main-nav ul a .nav-li:hover i {
   color: var(--c-acc-clr);
 }
 
@@ -180,10 +186,15 @@ body {
   bottom: 1.5rem;
   padding: 0.95rem;
   background-color: var(--c-btn-clr);
+  border: 2px solid var(--c-border-clr);
   border-radius: 10px;
 }
 .utility-btns i {
   font-size: 2rem;
+}
+
+.utility-btns:hover i {
+  color: var(--c-acc-clr);
 }
 
 #settings-btn {

@@ -19,6 +19,9 @@
     --lm-border-clr: hsl(0, 0%, 90%);
     --lm-font-clr: hsl(0, 0%, 0%);
 
+    --acc-htmlOrange-clr: hsl(18, 89%, 55%);
+    --acc-cssBlue-clr: hsl(222, 88%, 56%);
+    --acc-sassPink-clr: hsl(330, 50%, 61%);
     --acc-jsYellow-clr: hsl(52, 100%, 49%);
 
     --c-nav-clr: var(--dm-nav-clr);
@@ -27,7 +30,7 @@
     --c-card-clr: var(--dm-card-clr);
     --c-btn-clr: var(--dm-card-content-clr);
     --c-border-clr: var(--dm-border-clr);
-    --c-acc-clr: var(--acc-jsYellow-clr);
+    --c-acc-clr: var(--acc-sassPink-clr);
     --c-font-clr: var(--dm-font-clr);
 }
 
@@ -58,37 +61,40 @@ body {
         display: flex;
         flex-direction: row;
         width: 100%;
-        
-        .nav-li {
-            position: relative;
+
+        a {
+            text-decoration: none;
             width: 25%;
-            list-style: none;
-            font-size: 2.3rem;
-            text-align: center;
-            font-weight: 700;
-            padding-bottom: 1rem;
-            
-            a {
-                text-decoration: none;
-            }
 
-            .current-indicator {
-                position: absolute;
-                margin: auto;
-                width: 5rem;
-                height: 0.5rem;
-                bottom: 0;
-                left: 50%;
-                translate: -50% 0;
-                background-color: var(--c-acc-clr);
-                border-radius: 10px 10px 0 0;
+            .nav-li {
+                position: relative;
+                list-style: none;
+                font-size: 2.3rem;
+                text-align: center;
+                font-weight: 700;
+                padding-bottom: 1rem;
+    
+                .current-indicator {
+                    opacity: 0;
+                    position: absolute;
+                    margin: auto;
+                    width: 5rem;
+                    height: 0.5rem;
+                    bottom: 0;
+                    left: 50%;
+                    translate: -50% 0;
+                    background-color: var(--c-acc-clr);
+                    border-radius: 10px 10px 0 0;
+                    visibility: 0;
+                    transition: all 0.8s ease-in;
+                }
+            }
+            
+            .nav-li:hover {
+                p, i {color: var(--c-acc-clr)}
             }
         }
         
-        li:hover {
-            a, i {color: var(--c-acc-clr)}
-        }
-
     }
 }
 
@@ -207,10 +213,17 @@ body {
     bottom: 1.5rem;
     padding: 0.95rem;
     background-color: var(--c-btn-clr);
+    border: 2px solid var(--c-border-clr);
     border-radius: 10px;
     
     i {
         font-size: 2rem;
+    }
+}
+
+.utility-btns:hover {
+    i {
+        color: var(--c-acc-clr);
     }
 }
 

@@ -3,3 +3,6 @@ Progress made on the UI and UX side, functionality will be worked on later. Test
 
 09/11/22:
 Made the light mode look better and added an accent color. Also added borders for additional contrast and styled the sample cards but responsiveness with text overflow needs to be implemented. Also added an indicator for the current page but the functionality does not work yet only the basic look.
+
+09/12/22:
+Implemented the current indicator for the pages with an ease-in animation and added more accent colors.
